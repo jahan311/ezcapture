@@ -1,0 +1,41 @@
+@charset 'utf-8';
+
+/* images */
+@mixin image($name, $path: "../images/", $format:"png", $bgXY:center, $bg:'',) {
+    background: #{$bg} url("#{$path}#{$name}.#{$format}") no-repeat $bgXY;
+}
+
+@mixin img_logo {
+    @include image($name:'img_logo');
+    background-size: 100%;
+}
+
+@mixin img_logo_big {
+    @include image($name:'img_logo_big', $bg: $white);
+    background-size: 223px 184px;
+}
+
+@mixin ico_down {
+    @include image($name:'ico_down');
+    background-size: 100%;
+}
+
+@mixin ico_capture {
+    @include image($name:'ico_capture');
+    background-size: 100%;
+}
+
+@mixin ico_quick {
+    @include image($name:'ico_quick');
+    background-size: 100%;
+}
+
+@mixin ico_effect {
+    @include image($name:'ico_effect');
+    background-size: 100%;
+}
+
+@mixin ico_image {
+    @include image($name:'ico_image');
+    background-size: 100%;
+}

@@ -1,0 +1,141 @@
+@charset 'utf-8';
+$font-name: 'Pretendard';
+
+/* font */
+@mixin ftRegular {
+    font-family: $font-name;
+    font-weight: 400;
+}
+
+@mixin ftMedium {
+    font-family: $font-name;
+    font-weight: 500;
+}
+
+@mixin ftSemiBold {
+    font-family: $font-name;
+    font-weight: 600;
+}
+
+@mixin ftBold {
+    font-family: $font-name;
+    font-weight: 700;
+}
+
+@mixin ftExtraBold {
+    font-family: $font-name;
+    font-weight: 800;
+}
+
+@mixin ftSize($size) {
+    @if $size=='sm' {
+        font-size: 18px;
+    }
+
+    @if $size=='md' {
+        font-size: 24px;
+    }
+
+    @if $size=='lg' {
+        font-size: 42px;
+    }
+
+    @if $size=='title' {
+        font-size: 50px;
+    }
+}
+
+@mixin ellipsis($lines: 1) {
+    @if ($lines==1) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    @else {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: $lines;
+        -webkit-box-orient: vertical;
+    }
+}
+
+/* layout */
+@mixin flex($align, $justify, $gap:0, $direction: row) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+    flex-direction: $direction;
+}
+
+@mixin centerX($type: absolute, $top: null, $bottom: null) {
+    @if($type==fixed or $type==absolute) {
+        position: $type;
+        left: 50%;
+        top: $top;
+        bottom: $bottom;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin centerY($type: absolute, $left: null, $right: null) {
+    @if($type==fixed or $type==absolute) {
+        position: $type;
+        top: 50%;
+        left: $left;
+        right: $right;
+        transform: translateY(-50%);
+    }
+}
+
+@mixin centerXY($type: absolute) {
+    @if($type==fixed or $type==absolute) {
+        position: $type;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+/* scroll */
+@mixin scroll {
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $main-color;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+}
+
+@mixin content($display: inline-block) {
+    content: '';
+    display: $display;
+}
+
+@mixin button($width, $height, $radius) {
+    width: $width;
+    height: $height;
+
+    @if $radius !=0 {
+        border-radius: $radius;
+    }
+}

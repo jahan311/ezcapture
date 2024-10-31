@@ -1,0 +1,395 @@
+@charset 'utf-8';
+
+::selection {
+    background: $main-color;
+    color: $white;
+}
+
+body {
+    @include scroll;
+}
+
+.inner {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* z-index header 10 */
+.wrap {
+    position: relative;
+    width: 100%;
+    min-width: 1200px;
+    margin: 0 auto;
+    background: $white;
+
+    .header {
+        position: fixed;
+        width: 100%;
+        min-width: 1200px;
+        height: 100px;
+        background: rgba($white, 1.0);
+        z-index: 10;
+
+        &.bd {
+            border-bottom: 1px solid rgba($border-color, 0.5);
+        }
+
+        .inner {
+            @include flex(center, space-between);
+
+            h1 {
+                a {
+                    display: block;
+                    @include img_logo;
+                    width: 180px;
+                    height: 32px;
+                    font-size: 0;
+                }
+            }
+
+            nav {
+                ul {
+                    @include flex(center, center, 100px);
+
+                    li {
+                        @include ftBold;
+                        @include ftSize(sm);
+                        color: $font-main-color;
+                        transition: all 0.3s ease-in-out;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+
+            .down_btn {
+                @include button(130px, 44px, 6px);
+                background: $black;
+                @include ftRegular;
+                @include ftSize(sm);
+                color: $white;
+                text-align: center;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background: $main-color;
+                }
+            }
+        }
+    }
+
+    .contents {
+        position: relative;
+        width: 100%;
+        min-width: 1200px;
+        margin: 0 auto;
+        padding-top: 100px;
+
+        section {
+            position: relative;
+            width: 100%;
+            padding: 120px 0;
+            
+            &:not(.section04) {
+                .inner {
+                    opacity: 0;
+                    transform: translateY(50px);
+                    transition: opacity 1.2s ease, transform 1.2s ease;
+                    &.visible {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+            .inner {
+                text-align: center;
+                .section_sub_tit {
+                    @include ftMedium;
+                    @include ftSize(md);
+                    color: $font-sub-color;
+    
+                    & + .section_tit {
+                        margin-top: 6px;
+                    }
+                }
+    
+                .section_tit {
+                    @include ftBold;
+                    @include ftSize(title);
+                    color: $font-main-color;
+                    margin-bottom: 60px;
+                }
+            }
+
+            &.section01 {
+                background: $white;
+    
+                .inner {
+                    .top {
+                        text-align: left;
+                        @include flex(center, center, 60px);
+    
+                        .big_logo {
+                            @include img_logo_big;
+                            width: 282px;
+                            height: 282px;
+                            font-size: 0;
+                            border-radius: 40px;
+                            border: 1px solid $border-color;
+                        }
+    
+                        .info {
+                            .tit {
+                                p {
+                                    @include ftSemiBold;
+                                    @include ftSize(lg);
+                                    color: $font-main-color;
+                                }
+        
+                                h2 {
+                                    margin-top: 6px;
+                                    @include ftExtraBold;
+                                    @include ftSize(title);
+                                    color: $font-main-color;
+                                }
+                            }
+    
+                            .desc {
+                                margin-top: 30px;
+                                h3 {
+                                    @include ftMedium;
+                                    @include ftSize(md);
+                                    color: $font-sub-color;
+                                    line-height: 34px;
+                                }
+                                p {
+                                    margin-top: 10px;
+                                    @include ftRegular;
+                                    @include ftSize(sm);
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .down_btn {
+                        margin-top: 80px;
+                        @include button(282px, 80px, 10px);
+                        background: $black;
+                        @include ftSemiBold;
+                        @include ftSize(md);
+                        color: $white;
+                        transition: all 0.3s ease-in-out;
+    
+                        &::after {
+                            @include content;
+                            @include ico_down;
+                            width: 24px;
+                            height: 24px;
+                            margin-left: 6px;
+                            vertical-align: -3px;
+                        }
+        
+                        &:hover {
+                            background: $main-color;
+                        }
+                    }
+                }
+            }
+    
+            &.section02 {
+                background: $bg-color;
+
+                .inner {
+                    ul {
+                        width: 900px;
+                        margin: 0 auto;
+                        @include flex(center, space-between, 60px);
+                        flex-wrap: wrap;
+
+                        li {
+                            .tit {
+                                @include ftBold;
+                                @include ftSize(md);
+                                color: $font-main-color;
+
+                                &::before {
+                                    @include content(block);
+                                    width: 150px;
+                                    height: 150px;
+                                    margin: 0 auto 20px;
+                                }
+                            }
+
+                            .desc {
+                                margin-top: 20px;
+                                @include ftRegular;
+                                @include ftSize(sm);
+                                color: $font-sub-color;
+                                line-height: 26px;
+                            }
+
+                            &:nth-child(1) {
+                                .tit {
+                                    &::before {
+                                        @include ico_capture;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                .tit {
+                                    &::before {
+                                        @include ico_image;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                .tit {
+                                    &::before {
+                                        @include ico_effect;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(4) {
+                                .tit {
+                                    &::before {
+                                        @include ico_quick;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            &.section03 {
+                background: $white;
+
+                .tab_section {
+                    @include flex(flex-start, center, 62px);
+
+                    .tab {
+                        li {
+                            width: 244px;
+                            height: 68px;
+                            border-radius: 10px;
+                            @include ftMedium;
+                            @include ftSize(md);
+                            color: $font-sub-color;
+                            line-height: 68px;
+                            cursor: pointer;
+                            transition: all 0.3s ease-in-out;
+
+                            & + li {
+                                margin-top: 10px;
+                            }
+
+                            &.active {
+                                background: $main-color;
+                                color: white;
+                            }
+                        }
+                    }
+                    
+                    .tab_box {
+                        display: none;
+                        width: 894px;
+                        height: 503px;
+                        transition: all 0.3s ease-in-out;
+
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        &.show {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            &.section04 {
+                padding: 35px 0;
+                background: $main-color;
+
+                .inner {
+                    text-align: left;
+                    @include flex(center, space-between);
+
+                    p {
+                        @include ftBold;
+                        @include ftSize(title);
+                        color: $white;
+                    }
+
+                    .down_btn {
+                        @include button(282px, 80px, 10px);
+                        background: $main-color;
+                        border: 2px solid $white;
+                        @include ftSemiBold;
+                        @include ftSize(md);
+                        color: $white;
+                        transition: all 0.3s ease-in-out;
+    
+                        &::after {
+                            @include content;
+                            @include ico_down;
+                            width: 24px;
+                            height: 24px;
+                            margin-left: 6px;
+                            vertical-align: -3px;
+                            transition: all 0.3s ease-in-out;
+                        }
+        
+                        &:hover {
+                            background: $white;
+                            color: $black;
+    
+                            &::after {
+                                filter: brightness(0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        position: relative;
+        width: 100%;
+        min-width: 1200px;
+        margin: 0 auto;
+        background: $ft-bg-color;
+
+        .inner {
+            padding: 24px 0 32px;
+
+            p {
+                @include ftRegular;
+                font-size: 16px;
+                color: $white;
+                line-height: 26px;
+                opacity: 0.5;
+
+                a {
+                    @include ftRegular;
+                    font-size: 16px;
+                    color: $white;
+                    line-height: 26px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
