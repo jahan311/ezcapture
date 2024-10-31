@@ -199,37 +199,37 @@ em {
 
 @font-face {
   font-family: "Pretendard";
-  src: url("../fonts/Pretendard--Regular.eot");
-  src: local("str-replace("Pretendard", " ", "")"), local("Pretendard"), local("str-replace("Pretendard", " ", "-")"), url("../fonts/Pretendard--Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Pretendard--Regular.woff") format("woff");
-  font-style: "-Regular";
+  src: url("../fonts/Pretendard-Regular.eot");
+  src: local("str-replace("Pretendard", " ", "")"), local("Pretendard"), local("str-replace("Pretendard", " ", "-")"), url("../fonts/Pretendard-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Pretendard-Regular.woff") format("woff");
+  font-style: "Regular";
   font-weight: 400;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("../fonts/Pretendard--Medium.eot");
-  src: local("str-replace("Pretendard", " ", "")"), local("Pretendard"), local("str-replace("Pretendard", " ", "-")"), url("../fonts/Pretendard--Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Pretendard--Medium.woff") format("woff");
-  font-style: "-Medium";
+  src: url("../fonts/Pretendard-Medium.eot");
+  src: local("str-replace("Pretendard", " ", "")"), local("Pretendard"), local("str-replace("Pretendard", " ", "-")"), url("../fonts/Pretendard-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Pretendard-Medium.woff") format("woff");
+  font-style: "Medium";
   font-weight: 500;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("../fonts/Pretendard--SemiBold.eot");
-  src: local("str-replace("Pretendard", " ", "")"), local("Pretendard"), local("str-replace("Pretendard", " ", "-")"), url("../fonts/Pretendard--SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Pretendard--SemiBold.woff") format("woff");
-  font-style: "-SemiBold";
+  src: url("../fonts/Pretendard-SemiBold.eot");
+  src: local("str-replace("Pretendard", " ", "")"), local("Pretendard"), local("str-replace("Pretendard", " ", "-")"), url("../fonts/Pretendard-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Pretendard-SemiBold.woff") format("woff");
+  font-style: "SemiBold";
   font-weight: 600;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("../fonts/Pretendard--Bold.eot");
-  src: local("str-replace("Pretendard", " ", "")"), local("Pretendard"), local("str-replace("Pretendard", " ", "-")"), url("../fonts/Pretendard--Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Pretendard--Bold.woff") format("woff");
-  font-style: "-Bold";
+  src: url("../fonts/Pretendard-Bold.eot");
+  src: local("str-replace("Pretendard", " ", "")"), local("Pretendard"), local("str-replace("Pretendard", " ", "-")"), url("../fonts/Pretendard-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Pretendard-Bold.woff") format("woff");
+  font-style: "Bold";
   font-weight: 700;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("../fonts/Pretendard--ExtraBold.eot");
-  src: local("str-replace("Pretendard", " ", "")"), local("Pretendard"), local("str-replace("Pretendard", " ", "-")"), url("../fonts/Pretendard--ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Pretendard--ExtraBold.woff") format("woff");
-  font-style: "-ExtraBold";
+  src: url("../fonts/Pretendard-ExtraBold.eot");
+  src: local("str-replace("Pretendard", " ", "")"), local("Pretendard"), local("str-replace("Pretendard", " ", "-")"), url("../fonts/Pretendard-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Pretendard-ExtraBold.woff") format("woff");
+  font-style: "ExtraBold";
   font-weight: 800;
 }
 /* images */
